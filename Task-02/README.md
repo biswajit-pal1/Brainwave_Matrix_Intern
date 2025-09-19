@@ -2,23 +2,27 @@
 
 ## 📖 Overview
 This project is a **Blog Application** built using the MERN stack (MongoDB, Express.js, React.js, Node.js).  
-It provides basic CRUD functionality where users can create, view, edit, and delete blog posts with a simple and responsive interface.
+It provides CRUD functionality where users can create, view, edit, and delete blog posts.  
+The app also supports **image upload via Cloudinary** and **authentication with JWT**.
 
 ---
 
 ## ✨ Features
 - 📝 Create, edit, and delete blog posts  
-- 📑 View all posts with title and description  
-- 🔍 View detailed blog post page  
+- 📑 View all posts and detailed blog pages  
+- 📷 Upload blog images using Cloudinary  
+- 🔐 User authentication with JWT  
 - 📱 Responsive design for desktop and mobile  
-- ⚡ Fast and dynamic user experience with React frontend and Express backend  
+- ⚡ Smooth user experience with React frontend & Express backend  
 
 ---
 
 ## 🛠 Tech Stack
-- **Frontend:** React.js, tailwind 
+- **Frontend:** React.js, CSS (or Tailwind if used)  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB  
+- **Cloud Storage:** Cloudinary  
+- **Auth:** JWT (JSON Web Token)  
 - **Other Tools:** REST API, Axios, npm  
 
 ---
@@ -45,11 +49,8 @@ It provides basic CRUD functionality where users can create, view, edit, and del
      npm install
      ```
 
-3. Create a `.env` file inside the **backend** folder and add:
-   ```
-   MONGO_URI=<your-mongodb-connection-string>
-   PORT=5000
-   ```
+3. Copy the `.env.example` file inside the **backend** folder and rename it to `.env`.  
+   Then, update the values with your own credentials (MongoDB URI, Cloudinary keys, JWT secret, etc.).
 
 4. Start the backend server:
    ```bash
@@ -60,12 +61,11 @@ It provides basic CRUD functionality where users can create, view, edit, and del
 5. Start the frontend app:
    ```bash
    cd frontend
-   npm start
+   npm run dev
    ```
-
-6. Open the app in your browser:
+   The app will run at:
    ```
-   http://localhost:3000
+   http://localhost:5173
    ```
 
 ---
@@ -76,14 +76,5 @@ Task-02/
 │── frontend/      # React frontend
 │── backend/       # Express backend
 │── README.md      # Project documentation
+│── .env.example   # Example environment variables
 ```
-
----
-
-## 📸 Screenshots
-(Add screenshots of your blog app here)
-
----
-
-## 👨‍💻 Author
-Developed as part of the **Brainwave Matrix Internship** program.
